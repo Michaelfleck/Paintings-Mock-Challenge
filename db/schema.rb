@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_181556) do
+ActiveRecord::Schema.define(version: 2021_12_03_040104) do
 
   create_table "artists", force: :cascade do |t|
     t.string "first_name"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2021_11_29_181556) do
   create_table "museums", force: :cascade do |t|
     t.string "name"
     t.string "city"
+  end
+
+  create_table "paintings", force: :cascade do |t|
+    t.string "title"
+    t.integer "price_in_us_dollars"
+    t.integer "museum_id"
+    t.integer "artist_id"
   end
 
 end

@@ -24,6 +24,11 @@ puts "Creating paintings..."
 # * and a museum.                                                    *
 # ********************************************************************
 
+10.times do
+    Painting.create(title: Faker::Games::SuperMario.character, price_in_us_dollars: rand(100000000),
+    artist: Artist.all[rand(Artist.all.count)], museum: Museum.all[rand(Museum.all.count)])
+end
+
 puts "Deleting your entire github"
 sleep 1
 puts "Haha jk!"
